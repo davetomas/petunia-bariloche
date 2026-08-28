@@ -108,12 +108,16 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero" id="inicio">
-    <div class="hero-media" style="background-image:url('assets/img/hero-fogon.webp')" role="img" aria-label="Grupo alrededor de un fogón al atardecer frente al refugio Petunia"></div>
+    <div class="hero-media" aria-hidden="true">
+      <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/video/hero-poster.webp">
+        <source src="assets/video/hero-loop.mp4" type="video/mp4">
+      </video>
+    </div>
     <div class="container hero-content">
       <p class="eyebrow"><span data-lang="es">San Carlos de Bariloche · Costa del Lago Nahuel Huapi</span><span data-lang="en" hidden>San Carlos de Bariloche · Nahuel Huapi Lakeshore</span></p>
       <h1 class="reveal">
-        <span data-lang="es">Petunia, un refugio frente al lago</span>
-        <span data-lang="en" hidden>Petunia, a refuge on the lake</span>
+        <span data-lang="es">Petunia, Refugio de Lago</span>
+        <span data-lang="en" hidden>Petunia, Lake Refuge</span>
       </h1>
       <p class="lead reveal">
         <span data-lang="es">Camping, cabañas, motorhome, hostel y carretas a metros del agua. Un lugar familiar para desconectar, comer bien y mirar la Patagonia sin apuro.</span>
@@ -139,20 +143,20 @@
   <div class="stat-strip">
     <div class="container">
       <div class="stat">
-        <strong>+7</strong>
+        <strong><span class="stat-num" data-count="7">0</span></strong>
         <span data-lang="es">años de trayectoria</span><span data-lang="en" hidden>years of history</span>
       </div>
       <div class="stat">
-        <strong>+10</strong>
+        <strong><span class="stat-num" data-count="10">0</span></strong>
         <span data-lang="es">personas en el equipo</span><span data-lang="en" hidden>people on the team</span>
       </div>
       <div class="stat">
-        <strong>6</strong>
+        <strong><span class="stat-num" data-count="6" data-prefix="">0</span></strong>
         <span data-lang="es">formas de hospedarte</span><span data-lang="en" hidden>ways to stay</span>
       </div>
       <div class="stat">
-        <strong>1</strong>
-        <span data-lang="es">costa de lago, todo el año</span><span data-lang="en" hidden>lakeshore, all year</span>
+        <strong><span class="stat-num" data-count="800">0</span></strong>
+        <span data-lang="es">huéspedes felices</span><span data-lang="en" hidden>happy guests</span>
       </div>
     </div>
   </div>
@@ -394,7 +398,7 @@
             </div>
             <div class="field">
               <label for="fWa"><span data-lang="es">WhatsApp</span><span data-lang="en" hidden>WhatsApp</span></label>
-              <input type="tel" id="fWa" name="whatsapp" placeholder="+54 9 ...">
+              <input type="tel" id="fWa" name="whatsapp" placeholder="">
             </div>
             <div class="field">
               <label for="fEmail">Email</label>
@@ -415,9 +419,13 @@
                 <option data-lang="en" hidden value="Not sure yet">Not sure yet</option>
               </select>
             </div>
-            <div class="field full">
-              <label for="fFechas"><span data-lang="es">Fechas tentativas</span><span data-lang="en" hidden>Tentative dates</span></label>
-              <input type="text" id="fFechas" name="fechas" placeholder="Ej: 10 al 15 de enero">
+            <div class="field">
+              <label for="fCheckin"><span data-lang="es">Fecha de llegada</span><span data-lang="en" hidden>Check-in date</span></label>
+              <input type="date" id="fCheckin" name="checkin">
+            </div>
+            <div class="field">
+              <label for="fCheckout"><span data-lang="es">Fecha de salida</span><span data-lang="en" hidden>Check-out date</span></label>
+              <input type="date" id="fCheckout" name="checkout">
             </div>
             <div class="field full">
               <label for="fMsg"><span data-lang="es">Mensaje</span><span data-lang="en" hidden>Message</span></label>
