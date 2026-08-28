@@ -369,6 +369,32 @@ body::before {
 .amenity-strip h4 { font-family: var(--font-display); font-size: 1.15rem; margin: 0 0 4px; color: var(--mustard); }
 .amenity-strip p { color: rgba(251,246,236,0.82); margin: 0; font-size: 0.92rem; max-width: 560px; }
 
+/* ---------- Puerto propio (video + info) ---------- */
+.puerto-wrap {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: 0.72fr 1.28fr;
+  gap: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  background: var(--ink);
+}
+.puerto-media { position: relative; min-height: 360px; max-height: 480px; overflow: hidden; }
+.puerto-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.puerto-text {
+  background: var(--ink);
+  color: var(--cream-soft);
+  padding: clamp(28px, 4vw, 48px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.puerto-text .icon-wrap { width: 56px; height: 56px; flex-shrink: 0; background: rgba(251,246,236,0.12); border-radius: 50%; display: flex; align-items: center; justify-content: center; padding: 9px; margin-bottom: 16px; }
+.puerto-text .icon-wrap img { max-height: 36px; filter: brightness(0) invert(1); opacity: 0.92; }
+.puerto-text h3 { font-family: var(--font-display); font-size: clamp(1.3rem, 2.2vw, 1.7rem); margin: 0 0 10px; color: var(--mustard); }
+.puerto-text p { color: rgba(251,246,236,0.86); margin: 0; font-size: 1rem; max-width: 480px; }
+
 /* ---------- Bufet ---------- */
 .bufet-wrap {
   display: grid;
@@ -610,9 +636,10 @@ body::before {
 @media (max-width: 980px) {
   .main-nav { display: none; }
   .nav-toggle { display: flex; }
-  .nosotros-grid, .bufet-wrap, .location-grid, .contact-wrap { grid-template-columns: 1fr; }
+  .nosotros-grid, .bufet-wrap, .location-grid, .contact-wrap, .puerto-wrap { grid-template-columns: 1fr; }
   .nosotros-media img { height: 380px; }
   .bufet-media { min-height: 320px; }
+  .puerto-media { min-height: 260px; max-height: 340px; }
   .stay-grid { grid-template-columns: repeat(2, 1fr); }
   .stat-strip .container { grid-template-columns: repeat(2, 1fr); row-gap: 22px; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 220px; }
