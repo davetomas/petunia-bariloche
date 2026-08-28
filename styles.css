@@ -216,7 +216,7 @@ body::before {
   position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   color: #fdf7ea;
   overflow: hidden;
 }
@@ -239,14 +239,14 @@ body::before {
 .hero-content {
   position: relative;
   z-index: 2;
-  padding: 0 0 96px;
-  max-width: 780px;
+  padding: 64px 0 84px;
+  max-width: 860px;
 }
-.hero .eyebrow { color: var(--mustard); }
+.hero .eyebrow { color: var(--mustard); font-size: 0.9rem; }
 .hero .eyebrow::before { background: var(--mustard); }
-.hero h1 { color: #fffaf0; }
-.hero p.lead { color: rgba(255,250,240,0.88); font-size: 1.15rem; max-width: 560px; }
-.hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
+.hero h1 { color: #fffaf0; font-size: clamp(3rem, 7vw, 5.6rem); line-height: 1.04; }
+.hero p.lead { color: rgba(255,250,240,0.92); font-size: 1.28rem; max-width: 600px; margin-top: 4px; }
+.hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 32px; }
 
 .hero-scroll {
   position: absolute;
@@ -281,18 +281,19 @@ body::before {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 44px;
+  padding-bottom: 44px;
 }
 .stat-strip .stat { text-align: center; }
 .stat-strip .stat strong {
   display: block;
   font-family: var(--font-display);
-  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  font-size: clamp(2.1rem, 3.6vw, 3.2rem);
+  line-height: 1.1;
   color: var(--mustard);
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
-.stat-strip .stat span { font-size: 0.82rem; color: rgba(251,246,236,0.8); }
+.stat-strip .stat span { font-size: 1rem; color: rgba(251,246,236,0.85); }
 
 /* ---------- Nosotros ---------- */
 .nosotros-grid {
