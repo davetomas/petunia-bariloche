@@ -288,12 +288,13 @@ body::before {
 .stat-strip .stat strong {
   display: block;
   font-family: var(--font-display);
-  font-size: clamp(2.1rem, 3.6vw, 3.2rem);
-  line-height: 1.1;
+  font-size: clamp(3.4rem, 7vw, 5.8rem);
+  line-height: 1;
   color: var(--mustard);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
-.stat-strip .stat span { font-size: 1rem; color: rgba(251,246,236,0.85); }
+.stat-strip .stat strong .stat-num { font-size: inherit; }
+.stat-strip .stat > span { font-size: 0.98rem; color: rgba(251,246,236,0.85); }
 
 /* ---------- Nosotros ---------- */
 .nosotros-grid {
